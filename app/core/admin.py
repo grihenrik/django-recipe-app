@@ -10,19 +10,10 @@ class UserAdmin(BaseUserAdmin):
     ordering = ['id']
     list_display = ['email', 'name']
     fieldsets = (
-        (None,
-         {'fields': ('email', 'password')}
-         ),
-        (
-            _('Personal info'),
-            {'fields': ('name', )}
-        ),
-        (
-            _('Permissions'),
-            {
-                'fields': ('is_active', 'is_staff', 'is_superuser')
-            }
-        ),
+        (None, {'fields': ('email', 'password')}),
+        (_('Personal info'), {'fields': ('name', )}),
+        (_('Permissions'),
+         {'fields': ('is_active', 'is_staff', 'is_superuser')}),
         (
             _('Important dates'), {'fields': ('last_login',)}
         ),
@@ -34,5 +25,6 @@ class UserAdmin(BaseUserAdmin):
             'fields': ('email', 'password1', 'password2')
         }),
     )
+
 
 admin.site.register(models.User, UserAdmin)
