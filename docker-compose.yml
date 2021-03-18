@@ -20,7 +20,7 @@ services:
       - DB_PASS=supersecret123
 
   db:
-    image: postgres:10-alpine
+    image: postgres:13-alpine
     environment:
       - POSTGRES_DB=app
       - POSTGRES_USER=postgres
