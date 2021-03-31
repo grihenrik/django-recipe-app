@@ -128,7 +128,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-AUTH_USER_MODEL = 'core.user'
+AUTH_USER_MODEL = 'core.User'
 
 TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'
 
