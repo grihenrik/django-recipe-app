@@ -5,7 +5,7 @@ python:
 services:
   - docker
 
-before_script: pip install docker-compose coverage django-nose
+before_script: pip install docker-compose tox coverage django-nose
 
 script:
-  - docker-compose run app sh -c "python manage.py test && flake8"
+  - docker-compose run app sh -c "tox && flake8"
