@@ -8,4 +8,4 @@ services:
 before_script: pip install docker-compose tox coverage django-nose
 
 script:
-  - docker-compose --rm run app sh -c "./manage.py test && flake8"
+  - docker-compose run --rm app sh -c "./manage.py test && flake8"
