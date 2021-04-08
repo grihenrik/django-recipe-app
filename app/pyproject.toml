@@ -1,9 +1,6 @@
 [build-system]
-requires = ["poetry_core>=1.0.0"]
-build-backend = "poetry.core.masonry.api"
-
-[tool.poetry]
-name = "package_toml_poetry"
-version = "0.1.0"
-description = ""
-authors = ["Name <email@email.com>"]
+requires = [
+    "setuptools >=35.0.2",
+    "setuptools_scm >=2.0.0, <3"
+    ]
+build-backend = "setuptools.build_meta"

@@ -18,6 +18,8 @@ services:
       - DB_NAME=app
       - DB_USER=postgres
       - DB_PASS=supersecret123
+      - DJANGO_SETTINGS_MODULE=app.settings
+      - PYTHONPATH=/app
 
   db:
     image: postgres:13-alpine
