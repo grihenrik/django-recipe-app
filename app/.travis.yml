@@ -6,7 +6,7 @@ services:
   - docker
 
 before_install:
-  - chmod +w /app
+  - chmod 755 /app
 
 before_script: pip install docker-compose coverage django-nose
 
